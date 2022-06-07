@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VidaEnemigo : MonoBehaviour
+public class EnemyDamage : MonoBehaviour
 {
-    public int hp = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,13 +15,18 @@ public class VidaEnemigo : MonoBehaviour
     {
         
     }
-    public void DamageEnemy()
-    {
-        hp--;
 
-        if (hp >= 0)
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Meele")
         {
             Destroy(gameObject);
         }
+        if (other.tag == "Bullet")
+        {
+            Destroy(gameObject);
+        }
+
     }
+
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class killPlayer : MonoBehaviour
+public class MonedaRecoleccion : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,5 +14,14 @@ public class killPlayer : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Player")
+        {
+           Destroy(gameObject);
+        }
+       
     }
 }
