@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class MuertePlayer : MonoBehaviour
 {
+    public GameObject jugador;
     Vector3 spawn;
-    // Start is called before the first frame update
+    //Start is called before the first frame update
     void Start()
     {
         spawn = new Vector3(0.5f, 2f, -45f);
@@ -31,7 +32,7 @@ public class MuertePlayer : MonoBehaviour
 
         }
     }
-   /* void OnCollisionEnter(Collision col)
+    void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.tag == "Enemy")
         {
@@ -40,5 +41,5 @@ public class MuertePlayer : MonoBehaviour
 
         }
 
-    }*/
+    }
 }
