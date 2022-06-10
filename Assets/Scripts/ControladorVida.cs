@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,7 +20,7 @@ public class ControladorVida : MonoBehaviour
     {
         
     }
-    private void OnTriggerStay(Collider other)
+   private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player")
         {
@@ -32,17 +32,6 @@ public class ControladorVida : MonoBehaviour
             }
         }
     }
-    private void OnCollisionStay(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            currentDamageTime += Time.deltaTime;
-            if (currentDamageTime > damageTime)
-            {
-                playerVida.vida += cantidad;
-                currentDamageTime = 0.0f;
-            }
-        }
-    }
+    
 
 }

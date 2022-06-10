@@ -23,7 +23,7 @@ public class PasarEscena : MonoBehaviour
         if (other.tag == "Player")
         {
             SceneManager.LoadScene(numeroEscena);
-            Destroy(jugador);
+         
         }
     }
 
