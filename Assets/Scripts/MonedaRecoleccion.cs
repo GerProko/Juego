@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class MonedaRecoleccion : MonoBehaviour
 {
+    AudioSource Audio;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -20,7 +21,8 @@ public class MonedaRecoleccion : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-           Destroy(gameObject);
+           Audio.Play();
+           Destroy(gameObject,0.5f);
         }
        
     }

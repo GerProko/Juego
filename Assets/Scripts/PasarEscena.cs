@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityStandardAssets.Characters.FirstPerson;
+
 
 public class PasarEscena : MonoBehaviour
 {
     public int numeroEscena;
     public GameObject jugador;
-   // public GameObject botonPausa;
-  //  public GameObject ganaste;
+    public FirstPersonController fps;
+    // public GameObject botonPausa;
+    //  public GameObject ganaste;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +31,7 @@ public class PasarEscena : MonoBehaviour
             ganaste.SetActive(true);
             Time.timeScale = 0f;*/
             SceneManager.LoadScene(numeroEscena);
-
+            fps.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
         }
     }
 

@@ -10,8 +10,8 @@ public class MenuPausa : MonoBehaviour
     public GameObject botonPausa;
     public GameObject menuPausado;
     private bool juegoPausado = false;
-   /* public GameObject ganaste;
-    private bool panelganaste = false;*/
+    public GameObject ganaste;
+    private bool panelganaste = false;
     public int numeroEscena;
 
     public FirstPersonController fps;
@@ -25,7 +25,7 @@ public class MenuPausa : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (juegoPausado)
             {
@@ -51,6 +51,8 @@ public class MenuPausa : MonoBehaviour
         Time.timeScale = 0f;
         botonPausa.SetActive(false);
         menuPausado.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = false;
        // fps.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
     }
     public void Reanudar()
@@ -59,6 +61,8 @@ public class MenuPausa : MonoBehaviour
         Time.timeScale = 1f;
         botonPausa.SetActive(true);
         menuPausado.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = true;
        // fps.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = true;
     }
     public void Reiniciar()
@@ -73,10 +77,10 @@ public class MenuPausa : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
       //  fps.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
     }
-   /* public void Siguiente()
+    public void Siguiente()
     {
-        panelganaste = true;
+        
         ganaste.SetActive(false);
-        SceneManager.LoadScene(0);
-    }*/
+       
+    }
 }
