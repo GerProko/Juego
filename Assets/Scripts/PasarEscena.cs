@@ -7,6 +7,8 @@ public class PasarEscena : MonoBehaviour
 {
     public int numeroEscena;
     public GameObject jugador;
+   // public GameObject botonPausa;
+  //  public GameObject ganaste;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +24,11 @@ public class PasarEscena : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+          /*  botonPausa.SetActive(false);
+            ganaste.SetActive(true);
+            Time.timeScale = 0f;*/
             SceneManager.LoadScene(numeroEscena);
-         
+
         }
     }
 

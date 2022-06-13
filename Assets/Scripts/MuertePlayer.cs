@@ -11,7 +11,7 @@ public class MuertePlayer : MonoBehaviour
     void Start()
     {
         playerVida = GameObject.FindWithTag("Player").GetComponent<VidaPlayer>();
-        spawn = new Vector3(0.5f, 2f, -45f);
+        spawn = new Vector3(3.46f, 2f, -45f);
         CHc = GetComponent<CharacterController>();
     }
 
