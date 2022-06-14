@@ -22,8 +22,10 @@ public class MonedaRecoleccion : MonoBehaviour
         if(other.tag == "Player")
         {
            Audio.Play();
+           // gameObject.SetActive(false);
            Destroy(gameObject,0.5f);
         }
+       
        
     }
 }

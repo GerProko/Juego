@@ -10,9 +10,12 @@ public class Arma : MonoBehaviour
     //public float inacuracy;
     float currReloadTime;
     //bool canShoot = true;
+    AudioSource Audio2;
     void Start()
     {
         currReloadTime = reloadTime;
+        Audio2 = GetComponent<AudioSource>();
+
     }
     void Update()
     {
@@ -22,8 +25,10 @@ public class Arma : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Mouse0) && currReloadTime <= 0)
         {
+            
             var b = Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
             currReloadTime = reloadTime;
+            Audio2.Play();
         }
         
     }

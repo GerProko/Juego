@@ -55,7 +55,7 @@ public class MenuPausa : MonoBehaviour
         Cursor.visible = false;
         // fps.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
     }
-    public void Resume()
+    public void Reanudar()
     {
         juegoPausado = false;
         Time.timeScale = 1f;
