@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityStandardAssets.Characters.FirstPerson;
 
-public class MainMenu : MonoBehaviour
+
+public class NivelesMenu : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
+        
     }
 
     // Update is called once per frame
@@ -17,18 +17,20 @@ public class MainMenu : MonoBehaviour
     {
         
     }
-
-    public void EscenaJuego()
+    public void Home()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+    public void n1()
     {
         SceneManager.LoadScene("Nivel1");
     }
-    public void SalirJuego() 
+    public void n2()
     {
-        Application.Quit();
+        SceneManager.LoadScene("Nivel2");
     }
-    public void Niveles()
+    public void n3()
     {
-        SceneManager.LoadScene("Niveles");
+        SceneManager.LoadScene("Nivel3");
     }
 }
-
